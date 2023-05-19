@@ -35,8 +35,10 @@ window_record.set_focus()
 
 # click enable recording
 window_record['Button12'].click_input()
+
 # click save recording options
 window_record['Button2'].click_input()
+
 # close recording options
 window_record['Button1'].click_input()
 
