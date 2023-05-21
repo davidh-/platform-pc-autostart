@@ -20,8 +20,12 @@ button_load.click_input()
 dialog = app.window(title_re='Select a configuration File') 
 dialog.wait('ready')
 
+path_low = 'c-dahua-81242-109-2048-1536-and-dahua-50432-108-2560x1440-52000-sysconfig.txt'
+path_high = 'c-dahua-81242-109-2880-2160-and-dahua-50432-108-2560x1440-52000-sysconfig.txt'
+
+path = path_low
 # Type the file path and press enter
-dialog.type_keys('c-dahua-81242-109-2880-2160-and-dahua-50432-108-2560x1440-52000-sysconfig.txt{ENTER}', with_spaces=True)
+dialog.type_keys(path + '{ENTER}', with_spaces=True)
 
 # click recording menu button
 menu_item = tktoplevel.menu_item(u'Recording')
@@ -48,3 +52,4 @@ button_run = window_main['Button27']
 button_run.click_input()
 
 
+# to-do: add check every so often to see if otdau running
