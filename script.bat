@@ -4,7 +4,7 @@ REM Get the directory of the batch script
 set "script_dir=%~dp0"
 
 REM Start your application
-start "" "%script_dir%OTDAU 2.17.lnk"
+start "" "%script_dir%OTDAU 2.18.lnk"
 
 timeout /t 20 /nobreak &::>nul
 
