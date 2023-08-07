@@ -1,13 +1,19 @@
 @echo off
 setlocal enabledelayedexpansion
 
+echo Running android script for usb tethering and wifi hotspot
+
 set adbPath=C:\platform-tools\adb.exe
+
+REM Run this once to start adb daemon
+%adbPath% devices
 
 REM Check if any devices are connected
 for /f %%i in ('%adbPath% devices ^| find /c /v ""') do set deviceCount=%%i
 
 if !deviceCount! lss 3 (
   echo No devices found. Exiting...
+  timeout 3 > NUL
   exit /b 1
 )
 

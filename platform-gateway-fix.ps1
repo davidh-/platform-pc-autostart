@@ -17,3 +17,4 @@ if($knownNetworksPresent){
 else{
     New-NetRoute -InterfaceAlias $ethernet -DestinationPrefix 0.0.0.0/0 -NextHop $ethernetGatewayIP
 }
+
